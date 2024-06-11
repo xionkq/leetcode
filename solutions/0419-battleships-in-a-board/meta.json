@@ -1,0 +1,7 @@
+{
+  "id": 419,
+  "title": "甲板上的战舰",
+  "slug": "battleships-in-a-board",
+  "difficulty": "medium",
+  "label": ["深度优先搜索", "数组", "矩阵"]
+}
