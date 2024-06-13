@@ -1,0 +1,7 @@
+{
+  "id": 2813,
+  "title": "子序列最大优雅度",
+  "slug": "maximum-elegance-of-a-k-length-subsequence",
+  "difficulty": "hard",
+  "label": ["栈", "贪心", "数组", "哈希表", "排序", "堆（优先队列）"]
+}
