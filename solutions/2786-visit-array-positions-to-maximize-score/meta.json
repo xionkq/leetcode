@@ -1,0 +1,7 @@
+{
+  "id": 2786,
+  "title": "访问数组中的位置使分数最大",
+  "slug": "visit-array-positions-to-maximize-score",
+  "difficulty": "medium",
+  "label": ["数组", "动态规划"]
+}
