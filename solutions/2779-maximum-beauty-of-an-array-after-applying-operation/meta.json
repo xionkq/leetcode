@@ -1,0 +1,7 @@
+{
+  "id": 2779,
+  "title": "数组的最大美丽值",
+  "slug": "maximum-beauty-of-an-array-after-applying-operation",
+  "difficulty": "medium",
+  "label": ["数组", "二分查找", "排序", "滑动窗口"]
+}
