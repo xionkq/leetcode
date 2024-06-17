@@ -1,0 +1,7 @@
+{
+  "id": 522,
+  "title": "最长特殊序列 II",
+  "slug": "longest-uncommon-subsequence-ii",
+  "difficulty": "medium",
+  "label": ["数组", "哈希表", "双指针", "字符串", "排序"]
+}
