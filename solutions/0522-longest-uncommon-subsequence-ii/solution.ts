@@ -5,14 +5,14 @@
  */
 
 function findLUSlength(strs: string[]): number {
-  const sortedStrs = strs.sort((a, b) => b.length - a.length);
+  const sortedStrs = strs.sort((a, b) => b.length - a.length)
 
   const isSubsequence = (longStr: string, shortStr: string) => {
     if (longStr.length === shortStr.length) {
       return longStr === shortStr
     }
-    let indexLong= 0
-    let indexShort= 0
+    let indexLong = 0
+    let indexShort = 0
     while (indexLong < longStr.length && indexShort < shortStr.length) {
       if (longStr[indexLong] === shortStr[indexShort]) {
         indexLong++
@@ -44,4 +44,4 @@ function findLUSlength(strs: string[]): number {
   }
 
   return -1
-};
+}

@@ -9,9 +9,11 @@ function temperatureTrend(temperatureA: number[], temperatureB: number[]): numbe
   let current = 0
 
   const isSame = (i: number) => {
-    return (temperatureA[i + 1] === temperatureA[i] && temperatureB[i + 1] === temperatureB[i]) ||
-        (temperatureA[i + 1] > temperatureA[i] && temperatureB[i + 1] > temperatureB[i]) ||
-        (temperatureA[i + 1] < temperatureA[i] && temperatureB[i + 1] < temperatureB[i])
+    return (
+      (temperatureA[i + 1] === temperatureA[i] && temperatureB[i + 1] === temperatureB[i]) ||
+      (temperatureA[i + 1] > temperatureA[i] && temperatureB[i + 1] > temperatureB[i]) ||
+      (temperatureA[i + 1] < temperatureA[i] && temperatureB[i + 1] < temperatureB[i])
+    )
   }
 
   for (let i = 0; i < temperatureA.length - 1; i++) {

@@ -6,23 +6,23 @@
  */
 
 function countBeautifulPairs(nums: number[]): number {
-  let res = 0;
-  let cnt = new Array(10).fill(0);
+  let res = 0
+  let cnt = new Array(10).fill(0)
 
   for (let x of nums) {
     for (let y = 1; y <= 9; y++) {
       if (gcd(x % 10, y) === 1) {
-        res += cnt[y];
+        res += cnt[y]
       }
     }
     while (x >= 10) {
-      x = Math.floor(x / 10);
+      x = Math.floor(x / 10)
     }
-    cnt[x]++;
+    cnt[x]++
   }
-  return res;
+  return res
 }
 
 function gcd(a: number, b: number): number {
-  return b === 0 ? a : gcd(b, a % b);
+  return b === 0 ? a : gcd(b, a % b)
 }

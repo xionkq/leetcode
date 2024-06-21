@@ -11,7 +11,7 @@ function discountPrices(sentence: string, discount: number): string {
   const reg = /^\$[0-9]+$/
   const arr = sentence.split(' ').map((item) => {
     if (reg.test(item)) {
-      const n = Number(item.substring(1)) * (100 - discount) / 100
+      const n = (Number(item.substring(1)) * (100 - discount)) / 100
       return '$' + n.toFixed(2)
     }
     return item

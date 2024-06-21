@@ -23,4 +23,4 @@ function countBeautifulPairs(nums: number[]): number {
   }
 
   return res
-};
+}

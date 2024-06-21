@@ -29,8 +29,12 @@ function countBattleships(board: string[][]): number {
     }
     board[row][column] = '.'
     map.set(`${row},${column}`, true)
-    return removeShip(row, column - 1) && removeShip(row, column + 1) &&
-      removeShip(row - 1, column) && removeShip(row + 1, column)
+    return (
+      removeShip(row, column - 1) &&
+      removeShip(row, column + 1) &&
+      removeShip(row - 1, column) &&
+      removeShip(row + 1, column)
+    )
   }
 
   board.forEach((bs, i) => {

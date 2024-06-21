@@ -14,8 +14,8 @@ function findLUSlength(strs: string[]): number {
     if (longStr.length < shortStr.length) {
       return false
     }
-    let indexLong= 0
-    let indexShort= 0
+    let indexLong = 0
+    let indexShort = 0
     while (indexLong < longStr.length && indexShort < shortStr.length) {
       if (longStr[indexLong] === shortStr[indexShort]) {
         indexLong++
@@ -44,4 +44,4 @@ function findLUSlength(strs: string[]): number {
   }
 
   return res
-};
+}

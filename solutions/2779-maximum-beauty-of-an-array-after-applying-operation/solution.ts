@@ -11,7 +11,7 @@ function maximumBeauty(nums: number[], k: number): number {
   let end = 0
 
   for (let start = 0; start < length; start++) {
-    while (sortedArr[end] <= sortedArr[start] + (2 * k)  && end < length) {
+    while (sortedArr[end] <= sortedArr[start] + 2 * k && end < length) {
       end++
     }
     res = Math.max(res, end - start)
