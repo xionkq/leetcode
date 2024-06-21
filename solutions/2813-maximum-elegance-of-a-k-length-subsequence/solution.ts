@@ -6,7 +6,6 @@
 
 function findMaximumElegance(items: number[][], k: number): number {
   let totalP = 0
-  // @ts-ignore
   const cMap = new Map()
   let current = 0
   let result = 0

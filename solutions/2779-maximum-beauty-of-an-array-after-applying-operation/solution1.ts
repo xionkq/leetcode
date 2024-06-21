@@ -9,7 +9,6 @@
 
 function maximumBeauty(nums: number[], k: number): number {
   const maxNum = Math.max(...nums)
-  // @ts-ignore
   const diff = Array(maxNum + k + 2).fill(0)
   let curr = 0
   let res = 0

@@ -11,13 +11,10 @@
  */
 
 function maxIncreasingCells(mat: number[][]): number {
-  // @ts-ignore
   const map = new Map<number, [number, number][]>()
   const m = mat.length
   const n = mat[0].length
-  // @ts-ignore
   const rows = Array(m).fill(0)
-  // @ts-ignore
   const cols = Array(n).fill(0)
 
   for (let i = 0; i < m; i++) {
@@ -25,15 +22,14 @@ function maxIncreasingCells(mat: number[][]): number {
       if (!map.has(mat[i][j])) {
         map.set(mat[i][j], [])
       }
-      map.get(mat[i][j]).push([i, j])
+      map.get(mat[i][j])!.push([i, j])
     }
   }
 
   let res = 0
-  // @ts-ignore
   const sortedMap = Array.from(map.keys()).sort((a, b) => a - b)
   sortedMap.forEach((item) => {
-    const arr = map.get(item)
+    const arr = map.get(item)!
     const maxs = arr.map(([x, y]) => Math.max(rows[x], cols[y]) + 1)
     arr.forEach(([x, y], index) => {
       const max = maxs[index]

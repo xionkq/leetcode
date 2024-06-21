@@ -13,7 +13,6 @@ function findMaximumElegance(items: number[][], k: number): number {
   const selected = sortedArr.slice(0, k)
   const candidate = sortedArr.slice(k)
 
-  // @ts-ignore
   const cSet = new Set<number>()
   let totalProfit = 0
   const replace = Array<number>()

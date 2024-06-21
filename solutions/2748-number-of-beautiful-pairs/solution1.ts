@@ -7,7 +7,6 @@
 
 function countBeautifulPairs(nums: number[]): number {
   let res = 0;
-  // @ts-ignore
   let cnt = new Array(10).fill(0);
 
   for (let x of nums) {
@@ -24,6 +23,6 @@ function countBeautifulPairs(nums: number[]): number {
   return res;
 }
 
-function gcd(a: number, b: number) {
+function gcd(a: number, b: number): number {
   return b === 0 ? a : gcd(b, a % b);
 }

@@ -10,7 +10,6 @@ function countBattleships(board: string[][]): number {
   }
 
   let result = 0
-  // @ts-ignore
   const map: Map<string, boolean> = new Map()
   const maxRow = board.length
   const maxColumn = board[0].length
