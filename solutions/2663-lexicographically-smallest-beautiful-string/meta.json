@@ -1,0 +1,7 @@
+{
+  "id": 2663,
+  "title": "字典序最小的美丽字符串",
+  "slug": "lexicographically-smallest-beautiful-string",
+  "difficulty": "hard",
+  "label": ["贪心", "字符串"]
+}
