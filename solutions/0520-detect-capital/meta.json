@@ -1,0 +1,7 @@
+{
+  "id": 520,
+  "title": "检测大写字母",
+  "slug": "detect-capital",
+  "difficulty": "easy",
+  "label": ["字符串"]
+}

@@ -14,7 +14,7 @@ function smallestBeautifulString(s: string, k: number): string {
     for (let i = index + 1; i < sArr.length; i++) {
       const set = new Set<string>()
       for (let j = 1; j < 3; j++) {
-        (i - j >= 0) && set.add(sArr[i - j])
+        i - j >= 0 && set.add(sArr[i - j])
       }
       // 从a开始找不同于前两个字符的目标字符，找三次
       for (let j = 0; j < 3; j++) {
@@ -33,7 +33,7 @@ function smallestBeautifulString(s: string, k: number): string {
     // 将i前面两个字符存起来，修改后的i不可与其相同
     const set = new Set<string>()
     for (let j = 1; j < 3; j++) {
-      (i - j >= 0) && set.add(s[i - j])
+      i - j >= 0 && set.add(s[i - j])
     }
     // 找到不同于前两个字符的最小字符，因此最多三次便能找到
     for (let j = 1; j < 4; j++) {
@@ -47,4 +47,4 @@ function smallestBeautifulString(s: string, k: number): string {
   }
 
   return ''
-};
+}
