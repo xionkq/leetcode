@@ -1,0 +1,7 @@
+{
+  "id": 503,
+  "title": "下一个更大元素 II",
+  "slug": "next-greater-element-ii",
+  "difficulty": "medium",
+  "label": ["栈", "数组", "单调栈"]
+}
