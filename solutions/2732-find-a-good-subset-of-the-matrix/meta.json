@@ -1,0 +1,7 @@
+{
+  "id": 2732,
+  "title": "找到矩阵中的好子集",
+  "slug": "find-a-good-subset-of-the-matrix",
+  "difficulty": "hard",
+  "label": ["位运算", "数组", "哈希表", "矩阵"]
+}
