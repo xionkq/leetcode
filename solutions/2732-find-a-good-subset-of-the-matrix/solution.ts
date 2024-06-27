@@ -6,8 +6,8 @@
  */
 
 function goodSubsetofBinaryMatrix(grid: number[][]): number[] {
-  const n = grid.length;
-  const m = grid[0].length;
+  const n = grid.length
+  const m = grid[0].length
 
   for (let i = 0; i < n; i++) {
     if (grid[i].every((item) => item === 0)) {
@@ -31,4 +31,4 @@ function goodSubsetofBinaryMatrix(grid: number[][]): number[] {
   }
 
   return []
-};
+}
