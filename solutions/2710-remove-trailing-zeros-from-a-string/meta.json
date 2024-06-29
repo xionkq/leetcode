@@ -1,0 +1,7 @@
+{
+  "id": 2710,
+  "title": "移除字符串中的尾随零",
+  "slug": "remove-trailing-zeros-from-a-string",
+  "difficulty": "easy",
+  "label": ["字符串"]
+}
