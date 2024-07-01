@@ -1,0 +1,7 @@
+{
+  "id": 2065,
+  "title": "最大化一张图中的路径价值",
+  "slug": "maximum-path-quality-of-a-graph",
+  "difficulty": "hard",
+  "label": ["图", "数组", "回溯"]
+}
