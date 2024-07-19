@@ -1,0 +1,7 @@
+{
+  "id": 3096,
+  "title": "得到更多分数的最少关卡数目",
+  "slug": "minimum-levels-to-gain-more-points",
+  "difficulty": "medium",
+  "label": ["数组", "前缀和"]
+}
