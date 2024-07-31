@@ -1,0 +1,7 @@
+{
+  "id": 3111,
+  "title": "覆盖所有点的最少矩形数目",
+  "slug": "minimum-rectangles-to-cover-points",
+  "difficulty": "medium",
+  "label": ["贪心", "数组", "排序"]
+}
