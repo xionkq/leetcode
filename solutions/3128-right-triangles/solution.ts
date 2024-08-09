@@ -30,4 +30,4 @@ function numberOfRightTriangles(grid: number[][]): number {
   }
 
   return res
-};
+}
