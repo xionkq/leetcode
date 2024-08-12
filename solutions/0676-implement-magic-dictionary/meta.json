@@ -1,0 +1,7 @@
+{
+  "id": 676,
+  "title": "实现一个魔法字典",
+  "slug": "implement-magic-dictionary",
+  "difficulty": "medium",
+  "label": ["深度优先搜索", "设计", "字典树", "哈希表", "字符串"]
+}
