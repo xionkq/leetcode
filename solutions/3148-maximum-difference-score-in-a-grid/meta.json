@@ -1,0 +1,7 @@
+{
+  "id": 3148,
+  "title": "矩阵中的最大得分",
+  "slug": "maximum-difference-score-in-a-grid",
+  "difficulty": "medium",
+  "label": ["数组", "动态规划", "矩阵"]
+}
