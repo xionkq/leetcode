@@ -1,0 +1,7 @@
+{
+  "id": 3137,
+  "title": "K 周期字符串需要的最少操作次数",
+  "slug": "minimum-number-of-operations-to-make-word-k-periodic",
+  "difficulty": "medium",
+  "label": ["哈希表", "字符串", "计数"]
+}
