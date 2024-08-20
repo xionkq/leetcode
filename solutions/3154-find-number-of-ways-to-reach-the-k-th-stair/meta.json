@@ -1,0 +1,7 @@
+{
+  "id": 3154,
+  "title": "到达第 K 级台阶的方案数",
+  "slug": "find-number-of-ways-to-reach-the-k-th-stair",
+  "difficulty": "hard",
+  "label": ["位运算", "记忆化搜索", "数学", "动态规划", "组合数学"]
+}
