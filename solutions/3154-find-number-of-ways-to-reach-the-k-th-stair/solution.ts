@@ -18,7 +18,7 @@ function waysToReachStair(k: number): number {
     if (i === k) {
       res++
     }
-    res += dfs(i + (2 ** jump), jump + 1, 0)
+    res += dfs(i + 2 ** jump, jump + 1, 0)
     if (isBack === 0 && i > 0) {
       res += dfs(i - 1, jump, 1)
     }
@@ -27,7 +27,7 @@ function waysToReachStair(k: number): number {
   }
 
   return dfs(1, 0, 0)
-};
+}
 
 /**
  * 思路：答案思路，使用位运算计算的 key 值，复杂度降低很多，不是很明白其实
@@ -35,27 +35,27 @@ function waysToReachStair(k: number): number {
  * 空间复杂度：O(log k)
  */
 function waysToReachStair(k: number): number {
-  const store: Map<bigint, number> = new Map();
+  const store: Map<bigint, number> = new Map()
   const dfs = (i: number, jump: number, isBack: number): number => {
     if (i > k + 1) {
       return 0
     }
-    const key: bigint = (BigInt(i) << BigInt(32)) | BigInt(jump << 1) | BigInt(isBack);
+    const key: bigint = (BigInt(i) << BigInt(32)) | BigInt(jump << 1) | BigInt(isBack)
     if (store.has(key)) {
-      return store.get(key)!;
+      return store.get(key)!
     }
 
     let res = 0
     if (i === k) {
       res++
     }
-    res += dfs(i + (2 ** jump), jump + 1, 0)
+    res += dfs(i + 2 ** jump, jump + 1, 0)
     if (isBack === 0 && i > 0) {
       res += dfs(i - 1, jump, 1)
     }
-    store.set(key, res);
+    store.set(key, res)
     return res
   }
 
   return dfs(1, 0, 0)
-};
+}
