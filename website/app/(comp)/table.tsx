@@ -1,10 +1,12 @@
 'use client'
 
-import { Difficulty, SolutionMetaData } from '@/lib/type'
+import { Difficulty, LabelData, SolutionMetaData } from '@/lib/type'
 import { ChangeEvent, useState } from 'react'
+import { getLabelsBySolution } from '@/lib/labels'
 
 export function TableWithTabs({ solutions }: { solutions: SolutionMetaData[] }) {
   const [difficulty, setDifficulty] = useState<Difficulty>(Difficulty.ALL)
+  const [selectedLabels, setSelectedLabels] = useState<string[]>([])
   const handleClick = (e: ChangeEvent<HTMLInputElement>) => {
     setDifficulty(e.target.value as Difficulty)
   }
@@ -13,6 +15,8 @@ export function TableWithTabs({ solutions }: { solutions: SolutionMetaData[] }) 
   if (difficulty !== Difficulty.ALL) {
     list = solutions.filter((solution) => solution.difficulty === difficulty)
   }
+  const labels = getLabelsBySolution(list)
+
   return (
     <>
       <div role="tablist" className="tabs tabs-lifted w-[310px] ml-4" onChange={handleClick}>
@@ -31,31 +35,23 @@ export function TableWithTabs({ solutions }: { solutions: SolutionMetaData[] }) 
         <div className="col-start-1 row-start-2"></div>
       </div>
       <div className="bg-base-100 border-base-300 rounded-box p-6 block border mt-[-1px]">
-        <Filter></Filter>
+        <Filter labels={labels}></Filter>
         <Table solutions={list}></Table>
       </div>
     </>
   )
 }
 
-export function Filter() {
+export function Filter({ labels }: { labels: LabelData[] }) {
   return (
     <div className="flex flex-wrap gap-x-2 gap-y-1">
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串: 12</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串: 12</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串: 12</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串: 12</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串: 12</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串: 12</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串: 12</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串</div>
-      <div className="px-3.5 py-1 rounded-xl bg-slate-300">字符串</div>
+      {labels.map((l) => {
+        return (
+          <div className="px-3.5 py-1 rounded-xl bg-slate-300" key={l.name}>
+            {l.name}:{l.count}
+          </div>
+        )
+      })}
     </div>
   )
 }

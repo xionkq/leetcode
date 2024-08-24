@@ -12,3 +12,8 @@ export interface SolutionMetaData {
   difficulty: Difficulty
   label: string[]
 }
+
+export interface LabelData {
+  name: string
+  count: number
+}
