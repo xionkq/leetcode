@@ -1,19 +1,6 @@
 import path from 'node:path'
 import fs from 'fs'
-
-export enum Difficulty {
-  EASY = 'easy',
-  MEDIUM = 'medium',
-  HARD = 'hard',
-}
-
-export interface SolutionMetaData {
-  id: number
-  title: string
-  slug: string
-  difficulty: Difficulty
-  label: string[]
-}
+import { SolutionMetaData } from '@/lib/type'
 
 export function getSolutionDirNames() {
   const postsDirectory = path.join(process.cwd(), '../solutions')
