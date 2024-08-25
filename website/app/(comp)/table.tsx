@@ -6,9 +6,20 @@ import { getLabelsBySolution } from '@/lib/labels'
 
 export function TableWithTabs({ solutions }: { solutions: SolutionMetaData[] }) {
   const [difficulty, setDifficulty] = useState<Difficulty>(Difficulty.ALL)
-  const [selectedLabels, setSelectedLabels] = useState<string[]>([])
-  const handleClick = (e: ChangeEvent<HTMLInputElement>) => {
+  const [selectedLabels, setSelectedLabels] = useState<Set<string>>(new Set([]))
+
+  const handleTabChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSelectedLabels(new Set([]))
     setDifficulty(e.target.value as Difficulty)
+  }
+  const handleLabelClick = (label: string) => {
+    const s = new Set(selectedLabels)
+    if (selectedLabels.has(label)) {
+      s.delete(label)
+    } else {
+      s.add(label)
+    }
+    setSelectedLabels(s)
   }
 
   let list = solutions
@@ -17,37 +28,47 @@ export function TableWithTabs({ solutions }: { solutions: SolutionMetaData[] }) 
   }
   const labels = getLabelsBySolution(list)
 
+  let currentList = list
+  if (selectedLabels.size) {
+    currentList = list.filter((solution) => solution.label.some((l) => selectedLabels.has(l)))
+  }
+
   return (
     <>
-      <div role="tablist" className="tabs tabs-lifted w-[310px] ml-4" onChange={handleClick}>
-        <input
-          type="radio"
-          name="tab"
-          role="tab"
-          className="tab"
-          aria-label="所有"
-          value={Difficulty.ALL}
-          defaultChecked
-        />
-        <input type="radio" name="tab" role="tab" className="tab" aria-label="简单" value={Difficulty.EASY} />
-        <input type="radio" name="tab" role="tab" className="tab" aria-label="中等" value={Difficulty.MEDIUM} />
-        <input type="radio" name="tab" role="tab" className="tab" aria-label="困难" value={Difficulty.HARD} />
+      <div role="tablist" className="tabs tabs-lifted w-[310px] ml-4" onChange={handleTabChange}>
+        <input type="radio" name="tab" className="tab" aria-label="所有" value={Difficulty.ALL} defaultChecked />
+        <input type="radio" name="tab" className="tab" aria-label="简单" value={Difficulty.EASY} />
+        <input type="radio" name="tab" className="tab" aria-label="中等" value={Difficulty.MEDIUM} />
+        <input type="radio" name="tab" className="tab" aria-label="困难" value={Difficulty.HARD} />
         <div className="col-start-1 row-start-2"></div>
       </div>
       <div className="bg-base-100 border-base-300 rounded-box p-6 block border mt-[-1px]">
-        <Filter labels={labels}></Filter>
-        <Table solutions={list}></Table>
+        <Filter labels={labels} selectedLabels={selectedLabels} handleClick={handleLabelClick}></Filter>
+        <Table solutions={currentList}></Table>
       </div>
     </>
   )
 }
 
-export function Filter({ labels }: { labels: LabelData[] }) {
+// TODO: It would be better to replace div with checkboxes
+export function Filter({
+  labels,
+  handleClick,
+  selectedLabels,
+}: {
+  labels: LabelData[]
+  handleClick: (l: string) => void
+  selectedLabels: Set<string>
+}) {
   return (
     <div className="flex flex-wrap gap-x-2 gap-y-1">
       {labels.map((l) => {
         return (
-          <div className="px-3.5 py-1 rounded-xl bg-slate-300" key={l.name}>
+          <div
+            className={`px-3.5 py-1 rounded-xl border border-slate-300 ${selectedLabels.has(l.name) ? 'bg-slate-300' : ''}`}
+            key={l.name}
+            onClick={() => handleClick(l.name)}
+          >
             {l.name}:{l.count}
           </div>
         )
