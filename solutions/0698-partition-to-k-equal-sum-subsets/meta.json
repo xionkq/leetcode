@@ -1,0 +1,7 @@
+{
+  "id": 698,
+  "title": "划分为k个相等的子集",
+  "slug": "partition-to-k-equal-sum-subsets",
+  "difficulty": "medium",
+  "label": ["位运算", "记忆化搜索", "数组", "动态规划", "回溯", "状态压缩"]
+}
