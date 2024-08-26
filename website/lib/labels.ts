@@ -17,5 +17,5 @@ export function getLabelsBySolution(solutions: SolutionMetaData[]): LabelData[] 
     })
   })
 
-  return labels
+  return labels.sort((a, b) => b.count - a.count)
 }

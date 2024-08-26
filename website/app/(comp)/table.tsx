@@ -35,14 +35,14 @@ export function TableWithTabs({ solutions }: { solutions: SolutionMetaData[] }) 
 
   return (
     <>
-      <div role="tablist" className="tabs tabs-lifted w-[310px] ml-4" onChange={handleTabChange}>
+      <div role="tablist" className="tabs tabs-lifted w-[350px] ml-4" onChange={handleTabChange}>
         <input type="radio" name="tab" className="tab" aria-label="所有" value={Difficulty.ALL} defaultChecked />
         <input type="radio" name="tab" className="tab" aria-label="简单" value={Difficulty.EASY} />
         <input type="radio" name="tab" className="tab" aria-label="中等" value={Difficulty.MEDIUM} />
         <input type="radio" name="tab" className="tab" aria-label="困难" value={Difficulty.HARD} />
         <div className="col-start-1 row-start-2"></div>
       </div>
-      <div className="bg-base-100 border-base-300 rounded-box p-6 block border mt-[-1px]">
+      <div className="bg-base-100 border-base-300 rounded-box p-6 block border-2 mt-[-2px]">
         <Filter labels={labels} selectedLabels={selectedLabels} handleClick={handleLabelClick}></Filter>
         <Table solutions={currentList}></Table>
       </div>
@@ -61,11 +61,12 @@ export function Filter({
   selectedLabels: Set<string>
 }) {
   return (
-    <div className="flex flex-wrap gap-x-2 gap-y-1">
+    <div className="flex flex-wrap gap-x-2 gap-y-1 text-sm">
       {labels.map((l) => {
+        const selectedBg = selectedLabels.has(l.name) ? 'bg-slate-300' : ''
         return (
           <div
-            className={`px-3.5 py-1 rounded-xl border border-slate-300 ${selectedLabels.has(l.name) ? 'bg-slate-300' : ''}`}
+            className={`px-3.5 py-1 rounded-xl border border-slate-300 cursor-pointer ${selectedBg}`}
             key={l.name}
             onClick={() => handleClick(l.name)}
           >
@@ -91,11 +92,23 @@ export function Table({ solutions }: { solutions: SolutionMetaData[] }) {
         </thead>
         <tbody>
           {solutions.map((solution) => {
+            let tagColor = ''
+            switch (solution.difficulty) {
+              case Difficulty.HARD:
+                tagColor = 'text-rose-600'
+                break
+              case Difficulty.MEDIUM:
+                tagColor = 'text-amber-500'
+                break
+              case Difficulty.EASY:
+                tagColor = 'text-emerald-500'
+                break
+            }
             return (
               <tr key={solution.id}>
                 <th>{solution.id}</th>
                 <td>{solution.title}</td>
-                <td>{solution.difficulty}</td>
+                <td className={tagColor}>{solution.difficulty}</td>
                 <td>{solution.slug}</td>
               </tr>
             )

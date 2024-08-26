@@ -3,25 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --tab-border: 2px
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(0, 0, 0);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .tab {
+    @apply text-lg font-bold h-12
+  }
+
+  .table :where(thead, tfoot) {
+    @apply text-lg text-black
   }
 }
