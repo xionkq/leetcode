@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --tab-border: 2px
+  --tab-border: 2px;
 }
 
 body {
@@ -12,10 +12,10 @@ body {
 
 @layer components {
   .tab {
-    @apply text-lg font-bold h-12
+    @apply text-lg font-bold h-12;
   }
 
   .table :where(thead, tfoot) {
-    @apply text-lg text-black
+    @apply text-lg text-black;
   }
 }

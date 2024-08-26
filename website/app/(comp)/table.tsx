@@ -33,13 +33,32 @@ export function TableWithTabs({ solutions }: { solutions: SolutionMetaData[] }) 
     currentList = list.filter((solution) => solution.label.some((l) => selectedLabels.has(l)))
   }
 
+  let textAll = '所有',
+    textEasy = '简单',
+    textMedium = '中等',
+    textHard = '困难'
+  switch (difficulty) {
+    case Difficulty.ALL:
+      textAll = `所有${currentList.length}`
+      break
+    case Difficulty.EASY:
+      textEasy = `简单${currentList.length}`
+      break
+    case Difficulty.MEDIUM:
+      textMedium = `中等${currentList.length}`
+      break
+    case Difficulty.HARD:
+      textHard = `困难${currentList.length}`
+      break
+  }
+
   return (
     <>
       <div role="tablist" className="tabs tabs-lifted w-[350px] ml-4" onChange={handleTabChange}>
-        <input type="radio" name="tab" className="tab" aria-label="所有" value={Difficulty.ALL} defaultChecked />
-        <input type="radio" name="tab" className="tab" aria-label="简单" value={Difficulty.EASY} />
-        <input type="radio" name="tab" className="tab" aria-label="中等" value={Difficulty.MEDIUM} />
-        <input type="radio" name="tab" className="tab" aria-label="困难" value={Difficulty.HARD} />
+        <input type="radio" name="tab" className="tab" aria-label={textAll} value={Difficulty.ALL} defaultChecked />
+        <input type="radio" name="tab" className="tab" aria-label={textEasy} value={Difficulty.EASY} />
+        <input type="radio" name="tab" className="tab" aria-label={textMedium} value={Difficulty.MEDIUM} />
+        <input type="radio" name="tab" className="tab" aria-label={textHard} value={Difficulty.HARD} />
         <div className="col-start-1 row-start-2"></div>
       </div>
       <div className="bg-base-100 border-base-300 rounded-box p-6 block border-2 mt-[-2px]">
