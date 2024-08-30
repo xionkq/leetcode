@@ -1,0 +1,7 @@
+{
+  "id": 3153,
+  "title": "所有数对中数位差之和",
+  "slug": "sum-of-digit-differences-of-all-pairs",
+  "difficulty": "medium",
+  "label": ["数组", "哈希表", "数学", "计数"]
+}
