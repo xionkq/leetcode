@@ -1,0 +1,7 @@
+{
+  "id": 3127,
+  "title": "构造相同颜色的正方形",
+  "slug": "make-a-square-with-the-same-color",
+  "difficulty": "easy",
+  "label": ["数组", "枚举", "矩阵"]
+}
