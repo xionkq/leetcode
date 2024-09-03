@@ -1,0 +1,7 @@
+{
+  "id": 2708,
+  "title": "一个小组的最大实力值",
+  "slug": "maximum-strength-of-a-group",
+  "difficulty": "medium",
+  "label": ["贪心", "位运算", "数组", "动态规划", "回溯", "枚举", "排序"]
+}
