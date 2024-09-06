@@ -1,0 +1,7 @@
+{
+  "id": "3176",
+  "title": "求出最长好子序列 I",
+  "slug": "find-the-maximum-length-of-a-good-subsequence-i",
+  "difficulty": "medium",
+  "label": ["数组", "哈希表", "动态规划"]
+}
