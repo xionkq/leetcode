@@ -1,0 +1,7 @@
+{
+  "id": 977,
+  "title": "有序数组的平方",
+  "slug": "squares-of-a-sorted-array",
+  "difficulty": "easy",
+  "label": ["数组", "双指针", "排序"]
+}
