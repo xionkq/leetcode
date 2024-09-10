@@ -1,0 +1,7 @@
+{
+  "id": 2552,
+  "title": "统计上升四元组",
+  "slug": "count-increasing-quadruplets",
+  "difficulty": "hard",
+  "label": ["树状数组", "数组", "动态规划", "枚举", "前缀和"]
+}
