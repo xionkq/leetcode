@@ -1,0 +1,7 @@
+{
+  "id": 2555,
+  "title": "两个线段获得的最多奖品",
+  "slug": "maximize-win-from-two-segments",
+  "difficulty": "medium",
+  "label": ["数组", "二分查找", "滑动窗口"]
+}
