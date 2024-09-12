@@ -1,0 +1,7 @@
+{
+  "id": 2576,
+  "title": "求出最多标记下标",
+  "slug": "find-the-maximum-number-of-marked-indices",
+  "difficulty": "medium",
+  "label": ["贪心", "数组", "双指针", "二分查找", "排序"]
+}
