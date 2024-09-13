@@ -1,0 +1,7 @@
+{
+  "id": 2398,
+  "title": "预算内的最多机器人数目",
+  "slug": "maximum-number-of-robots-within-budget",
+  "difficulty": "hard",
+  "label": ["队列", "数组", "二分查找", "前缀和", "滑动窗口", "堆（优先队列）"]
+}
