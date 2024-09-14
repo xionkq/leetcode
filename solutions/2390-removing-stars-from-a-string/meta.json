@@ -1,0 +1,7 @@
+{
+  "id": 2390,
+  "title": "从字符串中移除星号",
+  "slug": "removing-stars-from-a-string",
+  "difficulty": "medium",
+  "label": ["栈", "字符串", "模拟"]
+}
