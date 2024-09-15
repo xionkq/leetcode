@@ -1,0 +1,7 @@
+{
+  "id": 2848,
+  "title": "与车相交的点",
+  "slug": "points-that-intersect-with-cars",
+  "difficulty": "easy",
+  "label": ["数组", "哈希表", "前缀和"]
+}
