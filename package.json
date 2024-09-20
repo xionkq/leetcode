@@ -4,7 +4,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "prettier solutions": "prettier --write --ignore-unknown solutions",
+    "prettier solutions": "prettier --write --ignore-unknown solutions/*/*.ts",
     "prettier website": "prettier --write --ignore-unknown website",
     "dev": "pnpm -C website dev",
     "build": "pnpm -C website build"
