@@ -1,0 +1,7 @@
+{
+  "id": 2374,
+  "title": "边积分最高的节点",
+  "slug": "node-with-highest-edge-score",
+  "difficulty": "medium",
+  "label": ["图", "哈希表"]
+}
