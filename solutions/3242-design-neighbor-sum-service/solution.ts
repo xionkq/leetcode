@@ -6,7 +6,7 @@
 
 class NeighborSum {
   grid: number[][]
-  valueMap: Map<number, number[]> = new Map<number, number[]>
+  valueMap: Map<number, number[]> = new Map<number, number[]>()
   adjacentGrid: number[][]
   diagonalGrid: number[][]
 

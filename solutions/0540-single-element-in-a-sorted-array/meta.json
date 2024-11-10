@@ -1,0 +1,7 @@
+{
+  "id": 540,
+  "title": "有序数组中的单一元素",
+  "slug": "single-element-in-a-sorted-array",
+  "difficulty": "medium",
+  "label": ["数组", "二分查找"]
+}
