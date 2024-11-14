@@ -1,0 +1,7 @@
+{
+  "id": "3249",
+  "title": "统计好节点的数目",
+  "slug": "count-the-number-of-good-nodes",
+  "difficulty": "medium",
+  "label": ["树", "深度优先搜索"]
+}
