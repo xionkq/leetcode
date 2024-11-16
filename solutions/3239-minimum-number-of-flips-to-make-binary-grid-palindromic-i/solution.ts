@@ -13,7 +13,7 @@ function minFlips(grid: number[][]): number {
 
   for (let i = 0; i < m; i++) {
     let j = 0
-    while (j < (n - j - 1)) {
+    while (j < n - j - 1) {
       if (grid[i][j] !== grid[i][n - j - 1]) {
         resRow++
       }
@@ -21,7 +21,7 @@ function minFlips(grid: number[][]): number {
     }
   }
 
-  for (let j = 0;j < n; j++) {
+  for (let j = 0; j < n; j++) {
     let i = 0
     while (i < m - i - 1) {
       if (grid[i][j] !== grid[m - i - 1][j]) {
@@ -32,4 +32,4 @@ function minFlips(grid: number[][]): number {
   }
 
   return Math.min(resCol, resRow)
-};
+}
