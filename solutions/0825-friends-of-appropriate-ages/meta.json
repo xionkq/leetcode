@@ -1,0 +1,7 @@
+{
+  "id": 825,
+  "title": "适龄的朋友",
+  "slug": "friends-of-appropriate-ages",
+  "difficulty": "medium",
+  "label": ["数组", "双指针", "二分查找", "排序"]
+}
