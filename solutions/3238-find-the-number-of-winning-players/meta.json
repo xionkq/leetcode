@@ -1,0 +1,7 @@
+{
+  "id": "3238",
+  "title": "求出胜利玩家的数目",
+  "slug": "find-the-number-of-winning-players",
+  "difficulty": "easy",
+  "label": ["数组", "哈希表", "计数"]
+}
