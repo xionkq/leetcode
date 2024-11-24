@@ -1,0 +1,7 @@
+{
+  "id": 632,
+  "title": "最小区间",
+  "slug": "smallest-range-covering-elements-from-k-lists",
+  "difficulty": "hard",
+  "label": ["贪心", "数组", "哈希表", "排序", "滑动窗口", "堆（优先队列）"]
+}
