@@ -1,0 +1,7 @@
+{
+  "id": 51,
+  "title": "N 皇后",
+  "slug": "n-queens",
+  "difficulty": "hard",
+  "label": ["数组", "回溯"]
+}
