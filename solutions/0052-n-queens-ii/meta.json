@@ -1,0 +1,7 @@
+{
+  "id": 52,
+  "title": "N 皇后 II",
+  "slug": "n-queens-ii",
+  "difficulty": "hard",
+  "label": ["回溯"]
+}
