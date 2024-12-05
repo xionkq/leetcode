@@ -1,0 +1,7 @@
+{
+  "id": 3001,
+  "title": "捕获黑皇后需要的最少移动次数",
+  "slug": "minimum-moves-to-capture-the-queen",
+  "difficulty": "medium",
+  "label": ["数学", "枚举"]
+}
