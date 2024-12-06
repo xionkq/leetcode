@@ -1,0 +1,7 @@
+{
+  "id": 999,
+  "title": "可以被一步捕获的棋子数",
+  "slug": "available-captures-for-rook",
+  "difficulty": "easy",
+  "label": ["数组", "矩阵", "模拟"]
+}
