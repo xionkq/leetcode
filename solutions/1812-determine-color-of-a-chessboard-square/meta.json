@@ -1,0 +1,7 @@
+{
+  "id": 1812,
+  "title": "判断国际象棋棋盘中一个格子的颜色",
+  "slug": "determine-color-of-a-chessboard-square",
+  "difficulty": "easy",
+  "label": ["数学", "字符串"]
+}
