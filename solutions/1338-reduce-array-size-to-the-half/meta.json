@@ -1,0 +1,7 @@
+{
+  "id": 1338,
+  "title": "数组大小减半",
+  "slug": "reduce-array-size-to-the-half",
+  "difficulty": "medium",
+  "label": ["贪心", "数组", "哈希表", "排序", "堆（优先队列）"]
+}
