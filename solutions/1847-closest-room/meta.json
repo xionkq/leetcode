@@ -1,0 +1,7 @@
+{
+  "id": 1847,
+  "title": "最近的房间",
+  "slug": "closest-room",
+  "difficulty": "hard",
+  "label": ["数组", "二分查找", "有序集合", "排序"]
+}
