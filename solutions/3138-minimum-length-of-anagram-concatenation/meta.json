@@ -1,0 +1,7 @@
+{
+  "id": 3138,
+  "title": "同位字符串连接的最小长度",
+  "slug": "minimum-length-of-anagram-concatenation",
+  "difficulty": "medium",
+  "label": ["哈希表", "字符串", "计数"]
+}
